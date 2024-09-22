@@ -1,7 +1,14 @@
-header,footer{
+header{
     background-color: white;
     padding: 5px;
     text-align: center;
+    
+}
+footer{
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
 }
 img{
     border-radius: 50%;
@@ -9,23 +16,28 @@ img{
     width: 150px;
     border: 2px solid #333;
 }
+img:hover{
+    opacity: 0.3;
+}
 nav{
-    position:static;
+    position:sticky;
     top: 0;
     width: 100%;
     z-index: 1000; 
-    background-color: darkgray;
+    background-color: rgb(112, 108, 108);
     color: white;
 }
 nav ul{
     list-style: none;
-    padding: 15px;
+    padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 nav ul li{
-    margin: 0 15px;
+    margin: 0 10px;
+    float: left;
 }
 nav ul li a{
     color: #fff;
@@ -33,7 +45,17 @@ nav ul li a{
     font-weight: bold;
 }
 nav ul li a:hover{
-    background-color: rgb(94, 112, 112);
+    background-color: rgb(57, 63, 63);
+}
+nav ul li a:active{
+        background-color:  rgb(94, 112, 112);
+}
+
+
+a{
+    display: block;
+    padding: 10px;
+
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -44,13 +66,13 @@ body{
 
 }
 
-.list ul li{
+.list ul li,#Projects ul li{
     list-style-type: none;
     padding: 0;
     background-color: rgb(219, 213, 213);
     margin: 5px 0;
-    padding: 10px;
-    border-left: 4px solid black;
+    padding: 15px;
+    border-left: 4px solid rgb(36, 35, 35);
 }
 section h1{
     border-bottom: 2px solid black;
@@ -73,4 +95,46 @@ section h2{
 }
 html{
     scroll-behavior: smooth;
+}
+table th{
+    background-color: rgb(57, 136, 41);
+    color: white;
+    padding: 10px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    padding: 5px;
+    
+}
+table tr,table td{
+    border: 2px solid #bdb6b6;
+    padding: 5px;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form lebel{
+    margin-top: 10px;
+}
+form input,form textarea{
+    padding: 10px;
+    margin: 5px 0;
+}
+button{
+    background-color: #4CAF50;
+    color:#fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+button:hover{
+    background-color: #45a049;
+}
+table tr:nth-child(odd){
+    background-color: #b4afaf;
 }
